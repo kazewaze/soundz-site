@@ -198,7 +198,7 @@ export default function Docs() {
             <li><code>tooltipPosition</code>: top | bottom | left | right</li>
             <li><code>tooltipAnimation</code>: fade | scale | slide</li>
             <li><code>animationSpeed</code>: string — Pulse animation speed</li>
-            <li><code>icon</code>: object — Select animated icon (speaker, waves, audioWaves, audioLines) or omit prop for no icon (ex: <code>{"icon={{name: 'speaker', size: 20, strokeWidth: 2.5}}"}</code>)</li>
+            <li><code>icon</code>: object — Select animated icon (speaker, waves, audioWaves, audioLines, trophy) or omit prop for no icon (ex: <code>{"icon={{name: 'speaker', size: 20, strokeWidth: 2.5}}"}</code>)</li>
             <li><code>theme</code>: auto | light | dark | neon | pastel | mono</li>
             <li><code>customTheme</code>: object - Declare your own theme & merge/override the defaults (ex: <code>{"customTheme={{tooltipBg: '#ff1493', tooltipColor: '#ffffff', pulseColor: '#ff1493'}}"}</code>)</li>
             <li><code>className</code>: string — CSS class for wrapper</li>

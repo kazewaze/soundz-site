@@ -9,7 +9,7 @@ export default function DynamicTheme() {
         pulseColor: '#ff1493'
       }}
       icon={{
-        name: "audioLines",
+        name: "trophy",
         size: 20,
         strokeWidth: 2.5
       }}

@@ -2,6 +2,7 @@
   --background: #fffdf7;
   --foreground: #171717;
   --heading-font: "Sedgwick Ave", cursive;
+  --mono-font: "Space Mono", Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 }
 
 ::selection {

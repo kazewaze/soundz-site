@@ -19,7 +19,7 @@
     "prismjs": "^1.30.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "soundz": "^1.0.1"
+    "soundz": "^1.0.2"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

@@ -2,12 +2,15 @@
  * prism.js Funky theme
  * Based on “Polyfilling the gaps” talk slides http://lea.verou.me/polyfilling-the-gaps/
  * @author Lea Verou
+ *  - Slightly Modified
+ *    @author Kaycee Ingram
  */
 
 code[class*="language-"],
 pre[class*="language-"] {
-	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-	font-size: 1rem;
+	font-family: var(--mono-font);
+	font-size: .95rem;
+	font-weight: 500;
 	text-align: left;
 	white-space: pre;
 	word-spacing: normal;
@@ -25,14 +28,6 @@ pre[class*="language-"] {
 	hyphens: none;
 }
 
-/* pre[class*="language-"] {
-	padding: .4em .8em;
-	margin: .5em 0;
-	overflow: auto;
-	background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Crect width='100' height='100' fill='%23222'/%3E%3Cpolygon points='0,50 50,0 0,0' fill='%23333'/%3E%3Cpolygon points='0,100 50,100 100,50 100,0' fill='%23333'/%3E%3C/svg%3E");
-	background-size: 1em 1em;
-} */
-
 @keyframes slide-bg {
 	0% {
 		background-position: 0 0;
@@ -48,10 +43,8 @@ pre[class*="language-"] {
 	overflow: auto;
 	background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Crect width='100' height='100' fill='%23222'/%3E%3Cpolygon points='0,50 50,0 0,0' fill='%23333'/%3E%3Cpolygon points='0,100 50,100 100,50 100,0' fill='%23333'/%3E%3C/svg%3E");
 	background-size: 1em 1em;
-	/* animation: slide-bg 10s linear infinite; */
 }
 
-/* #201d2f */
 code[class*="language-"] {
 	background: transparent;
 	color: white;

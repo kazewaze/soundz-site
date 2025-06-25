@@ -10,7 +10,7 @@ export default function TooltipIcon() {
       }}
       providedFX="firework"
       icon={{
-        name: "speaker",
+        name: "audioWaves",
         size: 20,
         strokeWidth: 2.5
       }}
