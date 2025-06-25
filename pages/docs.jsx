@@ -5,7 +5,6 @@ import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
 import ClientOnly from '@/components/ClientOnly';
 import CodePreview from '@/components/CodePreview/CodePreview';
-// import Soundz from '@/components/Soundz'; // example usage if needed
 
 import styles from '@/styles/Docs.module.css';
 
@@ -41,17 +40,26 @@ const customSoundCode = `
 const withAllOptionsCode = `
 <Soundz
   providedFX="boop"
-  hoverFX="/sounds/hover.mp3"
+  hoverFX="pop"
   clickCooldown={1000}
   fetchCooldown={10000}
   keyboardKey="k"
   enableHaptics
   showTooltip
   tooltipText="Boop!"
-  showWaveIcon
-  theme="neon"
+  tooltipPosition="top"
+  customTheme={{ // or available themes: theme="neon"
+    tooltipBg: '#ff1493',
+    tooltipColor: '#ffffff',
+    pulseColor: '#ff1493'
+  }}
+  icon={{
+    name: "audioLines",
+    size: 20,
+    strokeWidth: 2.5
+  }}
 >
-  Fancy Button
+  Click: Boop! - Hover: Pop!
 </Soundz>
 `;
 

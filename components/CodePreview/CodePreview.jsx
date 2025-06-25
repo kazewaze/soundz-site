@@ -58,6 +58,7 @@ const styles = {
 };
 
 function CodePreview({ filename, language = 'jsx', code }) {
+  const [copyBtnText, setCopyBtnText] = useState("Copy");
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -67,7 +68,12 @@ function CodePreview({ filename, language = 'jsx', code }) {
 
   const handleCopy = () => {
     copy(code);
-    alert('Copied to Clipboard');
+
+    setCopyBtnText("Copied");
+
+    setTimeout(() => { // Show "Copied" for 2 sec & return to "Copy".
+      setCopyBtnText("Copy");
+    }, 2000);
   };
 
   const combinedCodeBlockStyle = mounted
@@ -79,7 +85,7 @@ function CodePreview({ filename, language = 'jsx', code }) {
       <div style={styles.header}>
         <span style={styles.filename}>{filename}</span>
         <button onClick={handleCopy} style={styles.copyButton} aria-label="copy">
-          Copy
+          { copyBtnText }
         </button>
       </div>
       <div style={styles.codeContainer}>
