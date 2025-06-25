@@ -21,7 +21,7 @@
 
 ## 🏠 Home Page
 
-<a style="padding: 5px; border: 1.5px solid #e70067; border-radius: 3px; font-weight: 900; text-decoration: none; color: #ffffff; background-color: #ff0072; cursor: pointer;" href="https://soundz.vercel.app">
+<a style="padding: 5px; border: 1.5px solid #e70067; border-radius: 3px; font-weight: 900; text-decoration: none; color: #ffffff; background-color: #ff0072; cursor: pointer;" href="https://soundzjs.vercel.app">
   Soundz →
 </a>
 
@@ -29,7 +29,7 @@
 
 ## 📖 Documentation Page
 
-<a style="padding: 5px; border: 1.5px solid #e70067; border-radius: 3px; font-weight: 900; text-decoration: none; color: #ffffff; background-color: #ff0072; cursor: pointer;" href="https://soundz.vercel.app/docs">
+<a style="padding: 5px; border: 1.5px solid #e70067; border-radius: 3px; font-weight: 900; text-decoration: none; color: #ffffff; background-color: #ff0072; cursor: pointer;" href="https://soundzjs.vercel.app/docs">
   Soundz Docs →
 </a>
 
@@ -37,7 +37,7 @@
 
 ## 🖼️ Examples Page
 
-<a style="padding: 5px; border: 1.5px solid #e70067; border-radius: 3px; font-weight: 900; text-decoration: none; color: #ffffff; background-color: #ff0072; cursor: pointer;" href="https://soundz.vercel.app/examples">
+<a style="padding: 5px; border: 1.5px solid #e70067; border-radius: 3px; font-weight: 900; text-decoration: none; color: #ffffff; background-color: #ff0072; cursor: pointer;" href="https://soundzjs.vercel.app/examples">
   Soundz Examples →
 </a>
 
