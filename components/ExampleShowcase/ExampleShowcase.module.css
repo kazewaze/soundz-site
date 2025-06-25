@@ -1,0 +1,35 @@
+.section {
+  width: 100%;
+  max-width: 750px;
+  margin: 0 0 3rem 0;
+  padding: 0 0 2rem 0;
+  border: none;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.title {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.preview {
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 1rem 0;
+  padding: 1rem;
+  border: 1px solid #dddddd;
+  border-radius: 7px;
+  overflow-x: auto;
+  background: #f7f7f7;
+}
+
+.codeBlock {
+  line-height: 1.5;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  overflow-x: auto;
+}

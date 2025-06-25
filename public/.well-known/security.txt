@@ -1,0 +1,4 @@
+# Soundz Security Contact Info
+Contact: mailto:kazewaze.dev@gmail.com
+Preferred-Languages: en
+Expires: 2025-12-31T23:59:00Z

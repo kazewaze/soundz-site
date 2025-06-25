@@ -1,0 +1,79 @@
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 15px;
+  border-top: 1.5px solid #f7efdd;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #111111;
+  background-color: #fff9e9;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer > p:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer > p:nth-child(2) > a {
+  margin: 0 0 0 5px;
+}
+
+.builtWithIcon {
+  display: inline;
+  margin: 0 5px 0 5px;
+}
+
+.kayceeImage {
+  display: inline;
+  margin: 10px 0 0 0;
+}
+
+a.primary {
+  background: var(--foreground);
+  color: var(--background);
+  gap: 8px;
+}
+
+a.secondary {
+  border-color: var(--gray-alpha-200);
+  min-width: 158px;
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  a.primary:hover {
+    background: var(--button-primary-hover);
+    border-color: transparent;
+  }
+
+  a.secondary:hover {
+    background: var(--button-secondary-hover);
+    border-color: transparent;
+  }
+
+  .footer a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+  }
+}
+
+@media (max-width: 600px) {
+  a.secondary {
+    min-width: auto;
+  }
+
+  .footer {
+    flex-wrap: wrap;
+  }
+}

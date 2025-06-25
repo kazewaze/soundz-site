@@ -1,0 +1,68 @@
+.soundSelect {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  border-radius: 7px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: inherit;
+  background-color: transparent;
+}
+
+.soundSelect__Selection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.soundSelect__Selection > label {
+  display: none;
+  padding: 15px 0;
+  font-size: 2.25rem;
+  border: none;
+  color: hsl(240deg, 85%, 55%);
+  background-color: #FFFFFF;
+}
+
+.soundSelect__Selection > select {
+  margin: 0;
+  margin-bottom: 32px;
+  padding: 1.5px 6px 1.5px 1.5px;
+  font-size: 2rem;
+  font-weight: 700;
+  border: 3px solid #222222;
+  border-radius: 3.5px;
+  box-shadow: none;
+  cursor: pointer;
+  color: #FFFFFF;
+  background-color: #222222;
+}
+
+.btn {
+  margin: 0;
+  margin-top: 15px;
+  padding: calc(15px / 2) 15px;
+  font-size: 1.75rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 3.5px;
+  color: #FFFFFF;
+  background-color: hsl(333deg 100% 50% / 1);
+}
+.btn:hover,
+.btn:focus,
+.btn:active {
+  background-color: hsl(333deg 100% 45% / 1);
+}
+.btn:disabled {
+  text-decoration: line-through;
+  cursor: not-allowed;
+  color: #CCCCCC;
+  background-color: hsl(333deg 100% 30% / 1);
+}

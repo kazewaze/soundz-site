@@ -1,0 +1,88 @@
+.main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.main > h1,
+.main > p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+}
+
+.headingOne {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+.headingOneParagraph {
+  text-align: center;
+  font-size: 1.35rem;
+  margin-bottom: 2rem;
+}
+
+.headingImg {
+  display: inline;
+  margin: 0 7.5px 0 0;
+}
+
+.section {
+  margin-bottom: 3rem;
+}
+
+.section h2,
+.section p {
+  color: #000000;
+}
+
+.section h2 {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.section p,
+.paragraph {
+  padding: 1rem 0 1rem 0;
+  font-size: 1.30rem;
+}
+
+.paragraph code {
+  font-size: 1.25rem;
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  color: #ff0073;
+}
+
+.list {
+  padding: 0 0 0 1.5rem;
+  line-height: 1.8;
+  list-style-type: '⦿ ';
+}
+
+.list > li {
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-family: 'Readex Pro', 'Inter', 'Fira Sans', Helvetica Neue, sans-serif;
+  color: #000000;
+}
+
+.list > li > code {
+  font-size: 1.25rem;
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  color: #ff0073;
+}
+
+.additionalInfo {
+  max-width: 750px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 1rem 0;
+  padding: .5rem .75rem;
+  border-radius: 7px;
+  background-color: #fdf7e7;
+}

@@ -1,0 +1,44 @@
+.logo {
+  height: auto;
+  width: auto;
+}
+
+@media (max-width: 600px) {
+  .logo {
+    padding: 0 7.5px;
+  }
+}
+
+.heading {
+  font-family: var(--heading-font);
+  font-weight: 400;
+  font-style: normal;
+}
+
+.callToAction,
+.shoutoutTo {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+}
+
+.callToAction__text,
+.shoutoutTo__text {
+  height: 100px;
+  width: 200px;
+}
+
+.shoutoutTo__list {
+  height: 164px;
+  width: 250px;
+}
+
+.callToAction__downArrow {
+  height: 70px;
+  width: 70px;
+  margin: 0 0 2.25rem 0;
+}

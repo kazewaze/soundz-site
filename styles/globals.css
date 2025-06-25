@@ -1,0 +1,141 @@
+:root {
+  --background: #fffdf7;
+  --foreground: #171717;
+  --heading-font: "Sedgwick Ave", cursive;
+}
+
+::selection {
+  color: #FFFFFF;
+  background-color: #ff0073;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  max-width: 100vw;
+  line-height: 1.5;
+  touch-action: manipulation;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  font-family: 'Readex Pro', 'Inter', 'Fira Sans', Helvetica Neue, sans-serif;
+  font-weight: 400;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html { font-size: 100%; }
+
+@media screen and (max-width: 600px) {
+  html { font-size: 90%; }
+}
+@media screen and (max-width: 550px) {
+  html { font-size: 85%; }
+}
+@media screen and (max-width: 500px) {
+  html { font-size: 80%; }
+}
+@media screen and (max-width: 450px) {
+  html { font-size: 75%; }
+}
+@media screen and (max-width: 400px) {
+  html { font-size: 70%; }
+}
+
+body {
+  font-size: 18px; /* minimum font-size setting */
+  color: var(--foreground);
+  background: var(--background);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a, button { cursor: pointer; }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1 { font-size: 2.75rem; }
+h2 { font-size: 2.5rem;  }
+h3 { font-size: 2.25rem; }
+h4 { font-size: 2rem;    }
+h5 { font-size: 1.75rem; }
+h6 { font-size: 1.5rem;  }
+
+a { font-size: 1.25rem;   }
+p { font-size: 1.25rem;  }
+
+pre,
+pre *,
+code,
+code * { font-size: .85rem; font-weight: 500; }
+
+@media screen and (max-width: 450px) {
+  pre,
+  pre *,
+  code,
+  code * { font-size: 1rem; }
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+.page {
+  --gray-rgb: 0, 0, 0;
+  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
+  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
+
+  --button-primary-hover: #383838;
+  --button-secondary-hover: #f2f2f2;
+}
+
+a.primary {
+  background: var(--foreground);
+  color: var(--background);
+  gap: 8px;
+}
+
+a.secondary {
+  border-color: var(--gray-alpha-200);
+  min-width: 158px;
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  a.primary:hover {
+    background: var(--button-primary-hover);
+    border-color: transparent;
+  }
+
+  a.secondary:hover {
+    background: var(--button-secondary-hover);
+    border-color: transparent;
+  }
+}
+
+@media (max-width: 600px) {
+  .main {
+    padding: 20px 0;
+  }
+
+  a.secondary {
+    min-width: auto;
+  }
+}

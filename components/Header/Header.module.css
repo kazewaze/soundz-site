@@ -1,0 +1,133 @@
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  border-bottom: 1.5px solid #f7efdd;
+  background-color: #fdf7e7;
+  z-index: 50;
+}
+
+.container {
+  height: 64px;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 1250px) {
+  .container {
+    padding: 0;
+  }
+}
+
+.logo {
+  padding-left: .75rem;
+}
+
+.nav {
+  position: absolute;
+  top: 64px;
+  left: 0;
+  right: 0;
+  display: none;
+  flex-direction: column;
+  padding: 1rem 1.75rem;
+  border-top: 1.5px solid #f7efdd;
+  border-bottom: 1.5px solid #f7efdd;
+  background: #FFFCF1;
+  transition: all 0.3s ease;
+  z-index: 99;
+}
+
+.nav a {
+  padding: 0.5rem 0;
+}
+
+.nav.open {
+  display: flex;
+}
+
+.link {
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ff0072;
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  text-decoration: underline;
+  text-decoration-color: #ffc72c;
+  text-decoration-thickness: 3.5px;
+}
+
+.menuButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  color: #333;
+  background: none;
+  cursor: pointer;
+}
+
+.hamburger {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 100;
+}
+
+.hamburger span {
+  height: 2px;
+  width: 18px;
+  display: block;
+  border-radius: 1px;
+  background-color: #111111;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger.open span:first-child {
+  transform: translateY(4px) rotate(45deg);
+}
+
+.hamburger.open span:last-child {
+  transform: translateY(-4px) rotate(-45deg);
+}
+
+@media (min-width: 768px) {
+  .nav {
+    position: static;
+    display: flex !important;
+    flex-direction: row;
+    padding: 0;
+    border: none;
+    background: none;
+  }
+
+  .logo {
+    padding-left: 0;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .link {
+    margin-left: 1.5rem;
+  }
+
+  .menuButton {
+    display: none;
+  }
+}
