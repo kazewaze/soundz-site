@@ -1,0 +1,13 @@
+{
+  "functions": {
+    "api/**.js": {
+      "maxDuration": 10,
+      "memory": 1024,
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, POST",
+        "Access-Control-Allow-Headers": "Content-Type, Authorization"
+      }
+    }
+  }
+}
