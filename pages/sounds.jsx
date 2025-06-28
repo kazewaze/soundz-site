@@ -6,7 +6,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import RootLayout from '@/layouts/RootLayout';
 import Card from '@/components/Card/Card';
 
-import { capitalize } from '@/lib/helpers';
+import { capitalize, uncapitalize } from '@/lib/helpers';
 
 import styles from "@/styles/Sounds.module.css";
 
@@ -48,9 +48,9 @@ const SoundsGrid = ({ soundSelections }) => {
 
 export default function Sounds({ sounds }) {
   const soundSelections = sounds.map(soundName => {
-    return { name: capitalize(soundName), downloadFile: `${soundName.toLowerCase()}` };
+    return { name: capitalize(soundName), downloadFile: uncapitalize(soundName) };
   });
-
+console.log(soundSelections);
   return (
     <RootLayout home={false}>
     <main className={`${styles.main} ${geistSans.variable} ${geistMono.variable}`}>

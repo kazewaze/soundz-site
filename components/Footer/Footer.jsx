@@ -33,10 +33,6 @@ export default function Footer() {
           />
         </a>
       </p>
-      {/* <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '7.5px'}}>
-        <img alt="GitHub Repo Stars" src="https://img.shields.io/github/stars/kazewaze/soundz" />
-        <img alt="npm version" src="https://img.shields.io/npm/v/soundz?style=flat&color=ff0072" />
-      </div> */}
     </footer>
   );
 }
