@@ -16,6 +16,11 @@ function getIP(req) {
 }
 
 export default function handler(req, res) {
+  // Set CORS headers
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+
   const ip = getIP(req);
   const ua = req.headers['user-agent'] || '';
   const now = new Date().toISOString();
