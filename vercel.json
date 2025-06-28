@@ -1,10 +1,10 @@
 {
   "functions": {
-    "api/sounds.js": {
+    "pages/api/sounds.js": {
       "maxDuration": 10,
       "memory": 1024
     },
-    "api/*.js": {
+    "pages/api/*.js": {
       "maxDuration": 10,
       "memory": 1024
     }
