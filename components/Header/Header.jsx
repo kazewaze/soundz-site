@@ -5,6 +5,7 @@ import styles from './Header.module.css';
 
 const navItems = [
   { name: 'Docs', href: '/docs' },
+  { name: 'Sounds', href: '/sounds' },
   { name: 'Examples', href: '/examples' },
   { name: 'GitHub', href: 'https://github.com/kazewaze/soundz' }
 ];

@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children, home=true }) {
   return (
     <>
       <Head>
@@ -44,9 +44,17 @@ export default function RootLayout({ children }) {
       </Head>
       <div className={`${styles.page} ${geistSans.variable} ${geistMono.variable}`}>
         <Header />
-        <main className={styles.main}>
-          { children }
-        </main>
+        { // Custom main check needed ?
+          home
+          ?
+            <main className={styles.main}>
+              { children }
+            </main>
+          :
+            <>
+              { children }
+            </>
+        }
         <Footer />
       </div>
     </>

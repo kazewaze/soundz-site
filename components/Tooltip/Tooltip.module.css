@@ -1,0 +1,61 @@
+.wrapper {
+  position: relative;
+  display: inline-block;
+  cursor: help;
+}
+
+.tooltip {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.88);
+  color: white;
+  font-size: 0.85rem;
+  padding: 6px 10px;
+  border-radius: 5px;
+  white-space: nowrap;
+  z-index: 1000;
+  opacity: 1;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  max-width: calc(100vw - 12px);
+  pointer-events: none;
+}
+
+/* Arrow base */
+.arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+/* Arrow positions */
+.arrow-top {
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px 5px 0 5px;
+  border-color: rgba(0, 0, 0, 0.88) transparent transparent transparent;
+}
+
+.arrow-bottom {
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 0 5px 5px 5px;
+  border-color: transparent transparent rgba(0, 0, 0, 0.88) transparent;
+}
+
+.arrow-left {
+  right: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 5px 0 5px 5px;
+  border-color: transparent transparent transparent rgba(0, 0, 0, 0.88);
+}
+
+.arrow-right {
+  left: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 5px 5px 5px 0;
+  border-color: transparent rgba(0, 0, 0, 0.88) transparent transparent;
+}

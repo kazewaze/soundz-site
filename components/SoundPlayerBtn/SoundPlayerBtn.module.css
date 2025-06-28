@@ -1,0 +1,20 @@
+.audio,
+.container {
+  margin: 0;
+  padding: 0;
+  border: none;
+  color: inherit;
+  background: transparent;
+}
+
+.playPauseBtn,
+.playIcon,
+.pauseIcon {
+  margin: 0;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  background: transparent;
+}
+
+.playPauseBtn { padding: 10px; }

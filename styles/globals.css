@@ -3,6 +3,26 @@
   --foreground: #171717;
   --heading-font: "Sedgwick Ave", cursive;
   --mono-font: "Space Mono", Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+
+  --shadow-color: 43deg 27% 62%;
+  --shadow-elevation-low:
+    -0.2px 0.5px 0.5px hsl(var(--shadow-color) / 0.52),
+    -0.4px 0.8px 0.8px -1.9px hsl(var(--shadow-color) / 0.4),
+    -1px 2.1px 2.2px -3.7px hsl(var(--shadow-color) / 0.29);
+  --shadow-elevation-medium:
+    -0.2px 0.5px 0.5px hsl(var(--shadow-color) / 0.54),
+    -0.6px 1.3px 1.3px -1.2px hsl(var(--shadow-color) / 0.45),
+    -1.8px 3.9px 4px -2.5px hsl(var(--shadow-color) / 0.36),
+    -4.9px 10.5px 10.9px -3.7px hsl(var(--shadow-color) / 0.27);
+  --shadow-elevation-high:
+    -0.2px 0.5px 0.5px hsl(var(--shadow-color) / 0.5),
+    -0.9px 1.9px 2px -0.5px hsl(var(--shadow-color) / 0.46),
+    -1.8px 3.7px 3.9px -1.1px hsl(var(--shadow-color) / 0.42),
+    -3.3px 7px 7.3px -1.6px hsl(var(--shadow-color) / 0.38),
+    -5.9px 12.6px 13px -2.1px hsl(var(--shadow-color) / 0.34),
+    -10.1px 21.5px 22.3px -2.7px hsl(var(--shadow-color) / 0.29),
+    -16.2px 34.5px 35.7px -3.2px hsl(var(--shadow-color) / 0.25),
+    -24.7px 52.6px 54.5px -3.7px hsl(var(--shadow-color) / 0.21);
 }
 
 ::selection {
