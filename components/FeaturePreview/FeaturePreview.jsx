@@ -1,20 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import copy from 'copy-to-clipboard';
-import Prism from 'prismjs';
+import featStyles from './FeaturePreview.module.css';
 
 const styles = {
   wrapper: {
     width: '100%',
     maxWidth: '750px',
-    boxSizing: 'border-box',
     marginBottom: '18px',
-    border: '1px solid #201d2f',
-    borderBottom: '1px solid #2a2139',
-    borderRadius: '7px',
+    border: '1.75px solid #ffbd0a',
+    borderRadius: '3.5px',
     overflow: 'hidden',
     fontFamily: 'monospace',
-    color: '#FFFFFF',
-    background: '#222222'
+    color: '#222222',
+    background: '#fdf7e7'
   },
   header: {
     display: 'flex',
@@ -22,12 +20,13 @@ const styles = {
     alignItems: 'center',
     padding: '9px 18px',
     fontSize: '0.9rem',
-    background: '#222222'
+    color: '#222222',
+    background: '#ffbd0a'
   },
-  filename: {
+  featurename: {
     fontSize: '1.10rem',
     fontWeight: 700,
-    color: '#FFFFFF'
+    color: '#222222'
   },
   copyButton: {
     padding: '4.5px 9px',
@@ -50,20 +49,11 @@ const styles = {
     padding: '18px',
     lineHeight: '1.5',
     fontSize: '0.85rem'
-  },
-  codeBlockAnimated: {
-    animation: 'slide-bg 10s linear infinite'
   }
 };
 
-function CodePreview({ filename, language = 'jsx', code }) {
+function FeaturePreview({ featureName, code }) {
   const [copyBtnText, setCopyBtnText] = useState("Copy");
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    Prism.highlightAll();
-    setMounted(true);
-  }, [code]);
 
   const handleCopy = () => {
     copy(code);
@@ -75,25 +65,21 @@ function CodePreview({ filename, language = 'jsx', code }) {
     }, 2000);
   };
 
-  const combinedCodeBlockStyle = mounted
-    ? { ...styles.codeBlockBase, ...styles.codeBlockAnimated }
-    : styles.codeBlockBase;
-
   return (
     <div style={styles.wrapper}>
       <div style={styles.header}>
-        <span style={styles.filename}>{filename}</span>
+        <span style={styles.featurename}>{ featureName }</span>
         <button onClick={handleCopy} style={styles.copyButton} aria-label="copy">
           { copyBtnText }
         </button>
       </div>
       <div style={styles.codeContainer}>
-        <pre style={combinedCodeBlockStyle} className={`language-${language}`}>
-          <code className={`language-${language}`}>{code}</code>
+        <pre style={styles.codeBlockBase}>
+          <code className={featStyles.code}>{ code }</code>
         </pre>
       </div>
     </div>
   );
 }
 
-export default CodePreview;
+export default FeaturePreview;

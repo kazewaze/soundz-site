@@ -9,6 +9,7 @@ import ClientOnly from '@/components/ClientOnly';
 import ExampleShowcase from '@/components/ExampleShowcase/ExampleShowcase';
 
 import BasicUsage from '@/examples-code/BasicUsage';
+import KeyboardEnabled from '@/examples-code/KeyboardEnabled';
 import WithHaptics from '@/examples-code/WithHaptics';
 import DynamicTheme from '@/examples-code/DynamicTheme';
 import TooltipIcon from '@/examples-code/TooltipIcon';
@@ -35,7 +36,7 @@ export default function ExamplesPage({ codeSnippets }) {
         <meta name="theme-color" content="#FDF7E7" />
         <meta property="og:title" content="Soundz" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://soundz.vercel.app" />
+        <meta property="og:url" content="https://soundzjs.vercel.app" />
         <meta property="og:image" content="/s-icon.svg" />
         <meta property="og:image:alt" content="/s-icon.svg" />
         <link rel="prefetch" href="/s-icon.svg" as="image" type="image/svg+xml" />
@@ -50,6 +51,9 @@ export default function ExamplesPage({ codeSnippets }) {
 
           <ClientOnly>
             <ExampleShowcase title="Basic Usage" Component={BasicUsage} code={codeSnippets.basic} />
+          </ClientOnly>
+          <ClientOnly>
+            <ExampleShowcase title="Keyboard Enabled" Component={KeyboardEnabled} code={codeSnippets.keyboard} />
           </ClientOnly>
           <ClientOnly>
             <ExampleShowcase title="With Haptics" Component={WithHaptics} code={codeSnippets.haptics} />
@@ -70,6 +74,7 @@ export default function ExamplesPage({ codeSnippets }) {
 export async function getStaticProps() {
   const codeSnippets = {
     basic: fs.readFileSync(path.join(process.cwd(), 'examples-code/BasicUsage.jsx'), 'utf-8'),
+    keyboard: fs.readFileSync(path.join(process.cwd(), 'examples-code/KeyboardEnabled.jsx'), 'utf-8'),
     haptics: fs.readFileSync(path.join(process.cwd(), 'examples-code/WithHaptics.jsx'), 'utf-8'),
     dynamic: fs.readFileSync(path.join(process.cwd(), 'examples-code/DynamicTheme.jsx'), 'utf-8'),
     tooltip: fs.readFileSync(path.join(process.cwd(), 'examples-code/TooltipIcon.jsx'), 'utf-8')

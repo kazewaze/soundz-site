@@ -1,17 +1,16 @@
-import { Soundz, SoundzProvider } from 'soundz';
+import { Soundz } from 'soundz';
 
 export default function BasicUsage() {
   return (
-    <SoundzProvider
+    <Soundz
       icon={{
         name: "speaker",
         size: 20,
         strokeWidth: 2.5
       }}
+      providedFX="boop"
     >
-      <Soundz providedFX="boop">
-        Play Boop!
-      </Soundz>
-    </SoundzProvider>
+      Play Boop!
+    </Soundz>
   );
 }

@@ -1,0 +1,85 @@
+.card {
+  min-height: 100px;
+  width: 100%;
+  min-width: 250px;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 25%;
+  flex: 1;
+  margin: 1rem;
+  padding: 0 0 1rem 0;
+  border: 1px solid #f0f0f0;
+  border-radius: 7px;
+  box-shadow: var(--shadow-elevation-low);
+  color: #000000;
+  background-color: #ffffff;
+  transition: transform 0.2s ease;
+}
+
+.card:hover,
+.card:active,
+.card:focus,
+.card:focus-within {
+  transform: scale(1.025);
+  box-shadow: var(--shadow-elevation-medium);
+}
+
+.titleSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: .75rem 0 .25rem 0;
+}
+
+.titleSection > h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #201d2f;
+}
+
+.descSection {
+  text-align: center;
+  margin: 0;
+  padding: 0 .5rem;
+}
+
+.descSection > p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #201d2f;
+}
+
+.codeSection {
+  margin: 9px 0 0 0;
+  padding: .5rem;
+  border: none;
+  border-radius: 3.5px;
+  color: inherit;
+  background: transparent;
+}
+
+/* Temporary Override Styles on the FeaturePreview Component */
+.codeSection > div {
+  margin-bottom: 0 !important;
+}
+.codeSection > div > div {
+  padding: 4.5px 4.5px !important;
+}
+.codeSection pre,
+.codeSection code,
+.codeSection code span {
+  font-size: 0.85rem !important;
+}
+.codeSection pre,
+.codeSection code {
+  padding: 9px 2.25px !important;
+}
+.codeSection span {
+  font-size: 1rem !important;
+}
+.codeSection button {
+  font-size: .90rem !important;
+}

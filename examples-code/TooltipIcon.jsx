@@ -1,13 +1,8 @@
-import { Soundz } from 'soundz';
+import { Soundz, SoundzProvider } from 'soundz';
 
 export default function TooltipIcon() {
   return (
-    <Soundz
-      customTheme={{
-        tooltipBg: '#ff1493',
-        tooltipColor: '#ffffff',
-        pulseColor: '#ff1493'
-      }}
+    <SoundzProvider
       providedFX="firework"
       icon={{
         name: "audioWaves",
@@ -18,7 +13,9 @@ export default function TooltipIcon() {
       tooltipText="POW!"
       tooltipPosition="top"
     >
-      Play Firework!
-    </Soundz>
+      <Soundz>
+        Play Firework!
+      </Soundz>
+    </SoundzProvider>
   );
 }

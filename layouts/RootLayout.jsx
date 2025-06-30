@@ -27,7 +27,7 @@ export default function RootLayout({ children, home=true }) {
         <meta name="theme-color" content="#FDF7E7" />
         <meta property="og:title" content="Soundz" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://soundz.vercel.app" />
+        <meta property="og:url" content="https://soundzjs.vercel.app" />
         <meta property="og:image" content="/s-icon.svg" />
         <meta property="og:image:alt" content="/s-icon.svg" />
         <link rel="prefetch" href="/kaycee.svg" as="image" type="image/svg+xml" />
@@ -44,7 +44,7 @@ export default function RootLayout({ children, home=true }) {
       </Head>
       <div className={`${styles.page} ${geistSans.variable} ${geistMono.variable}`}>
         <Header />
-        { // Custom main check needed ?
+        { // Custom <main> needed ? otherwise use home.
           home
           ?
             <main className={styles.main}>

@@ -4,7 +4,10 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
 import ClientOnly from '@/components/ClientOnly';
+import PropCard from '@/components/PropCard/PropCard';
 import CodePreview from '@/components/CodePreview/CodePreview';
+
+import { getPropSelections } from '@/lib/helpers';
 
 import styles from '@/styles/Docs.module.css';
 
@@ -63,6 +66,24 @@ const withAllOptionsCode = `
 </Soundz>
 `;
 
+const propSelections = getPropSelections();
+const PropsGrid = ({ propSelections }) => {
+  return (
+    <section className={styles.propsGrid}>
+      {
+        propSelections.map((prop, index) => (
+          <PropCard
+            key={`${index}__${prop.name}`}
+            name={prop.name}
+            desc={prop.desc}
+            codeSnippet={prop.codeSnippet}
+          />
+        ))
+      }
+    </section>
+  );
+};
+
 export default function Docs() {
   return (
     <>
@@ -75,7 +96,7 @@ export default function Docs() {
         <meta name="theme-color" content="#FDF7E7" />
         <meta property="og:title" content="Soundz" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://soundz.vercel.app" />
+        <meta property="og:url" content="https://soundzjs.vercel.app" />
         <meta property="og:image" content="/s-icon.svg" />
         <meta property="og:image:alt" content="/s-icon.svg" />
         <link rel="preload" href="/s-icon.svg" as="image" type="image/svg+xml" />
@@ -184,30 +205,7 @@ export default function Docs() {
             />
             - Props Reference
           </h2>
-          <ul className={styles.list}>
-            <li><code>providedFX</code>: string — Name of predefined sound (default: <code>boop</code>)</li>
-            <li><code>customFX</code>: string — Custom API URL to MP3 file</li>
-            <li><code>hoverFX</code>: string — Sound to play on hover (Works with Provided Sounds: <code>hoverFX="pop"</code> - or - Custom API URL: <code>hoverFX="https://my-sounds.io/clap.mp3"</code>) (Use SoundzProvider for this feature)</li>
-            <li><code>noClickSound</code>: boolean — Disable sound on click (ex: Hover Sound Only)</li>
-            <li><code>fetchCooldown</code>: number — Delay before re-fetching same sound (ms)</li>
-            <li><code>clickCooldown</code>: number — Debounce clicking sound effect (ms)</li>
-            <li><code>keyboardKey</code>: string — Trigger sound with key press</li>
-            <li><code>enableHaptics</code>: boolean — Vibrate on click if supported</li>
-            <li><code>showTooltip</code>: boolean — Show text when sound plays</li>
-            <li><code>tooltipText</code>: string — Text shown in tooltip</li>
-            <li><code>tooltipPosition</code>: top | bottom | left | right</li>
-            <li><code>tooltipAnimation</code>: fade | scale | slide</li>
-            <li><code>animationSpeed</code>: string — Pulse animation speed</li>
-            <li><code>icon</code>: object — Select animated icon (speaker, waves, audioWaves, audioLines, trophy) or omit prop for no icon (ex: <code>{"icon={{name: 'speaker', size: 20, strokeWidth: 2.5}}"}</code>)</li>
-            <li><code>theme</code>: auto | light | dark | neon | pastel | mono</li>
-            <li><code>customTheme</code>: object - Declare your own theme & merge/override the defaults (ex: <code>{"customTheme={{tooltipBg: '#ff1493', tooltipColor: '#ffffff', pulseColor: '#ff1493'}}"}</code>)</li>
-            <li><code>className</code>: string — CSS class for wrapper</li>
-            <li><code>style</code>: CSSProperties — Inline styles for wrapper</li>
-            <li><code>layout</code>: string — CSS layout (e.g. <code>"inline-flex"</code>)</li>
-            <li><code>wrap</code>: string — Custom CSS class or style block</li>
-            <li><code>loading</code>: {"( ) => ReactNode"} — Optional loading state component</li>
-            <li><code>apiBaseUrl</code>: string — Override the base API URL for sound fetches</li>
-          </ul>
+          <PropsGrid propSelections={ propSelections } />
         </section>
 
         <section className={styles.section}>
