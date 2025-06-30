@@ -1,6 +1,5 @@
 import { LRUCache } from 'lru-cache';
-import fs from 'fs';
-import path from 'path';
+// import path from 'path';
 
 const isDev = process.env.NODE_ENV !== 'production';
 const MAX_REQUESTS = isDev ? 1000 : 5;
@@ -45,16 +44,13 @@ export default function handler(req, res) {
     return res.status(400).json({ error: 'Missing or invalid sound parameter.' });
   }
 
-  // Resolve File
-  const requestedPath = path.resolve('./public/sounds', `${sound}.mp3`);
-  const fallbackPath = path.resolve('./public/sounds', `default.mp3`);
-
+  // Resolve File URL
   const protocol = req.headers['x-forwarded-proto'] || 'http';
   const host = req.headers.host;
 
-  const fileExists = fs.existsSync(requestedPath);
-  const finalSound = fileExists ? sound : 'default';
-
+  // The public directory is automatically served on Vercel
+  const finalSound = (sound && sound.trim()) || 'default'; // Default fallback
   const url = `${protocol}://${host}/sounds/${encodeURIComponent(finalSound)}.mp3`;
+
   res.status(200).json({ name: finalSound, url });
 }
