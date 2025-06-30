@@ -55,6 +55,11 @@ export default function handler(req, res) {
   const fileExists = fs.existsSync(requestedPath);
   const finalSound = fileExists ? sound : 'default';
 
-  const url = `${protocol}://${host}/sounds/${encodeURIComponent(finalSound)}.mp3`;
+  // Dynamic URL generation based on environment (localhost vs. production)
+  const baseUrl = protocol === 'https' && host !== 'localhost:3000'
+    ? `https://${host}` // Production URL on Vercel
+    : `http://localhost:3000`; // Local development URL
+
+  const url = `${baseUrl}/sounds/${encodeURIComponent(finalSound)}.mp3`;
   res.status(200).json({ name: finalSound, url });
 }
